@@ -72,7 +72,11 @@ const HomePage: NextPage<{ countries: Array<Country> }> = ({
             }}
           />
         </div>
-        <Countries countires={countries} />
+        {Boolean(countries.length) ? (
+          <Countries countires={countries} />
+        ) : (
+          "Loading...!"
+        )}
       </main>
     </div>
   );
