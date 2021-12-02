@@ -6,7 +6,7 @@ import { SearchBox } from "../components/SearchBox";
 import { Select, OptionType } from "../components/Select";
 import { countriesAPI, Country } from "../services/countries";
 
-import styles from "../styles/home.module.css";
+import styles from "../styles/home.module.scss";
 import { GetServerSideProps, NextPage } from "next";
 
 const OPTOINS: Array<OptionType> = [
