@@ -1,4 +1,5 @@
 .Layout {
+  overflow-x: hidden;
   &__Slot {
     padding: 0 var(--layout-padding);
     max-width: var(--desktop-width);
