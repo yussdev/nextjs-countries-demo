@@ -4,6 +4,10 @@
   gap: 80px;
   margin-bottom: 100px;
 
+  > * {
+    content-visibility: auto;
+  }
+
   @media screen and (max-width: 1300px) {
     & {
       grid-template-columns: repeat(3, minmax(100px, 1fr));
