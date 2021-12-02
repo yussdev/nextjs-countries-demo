@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  > h1 {
+    color: var(--text-color);
+    font-size: 22px;
+  }
+}
