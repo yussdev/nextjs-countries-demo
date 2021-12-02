@@ -1,26 +1,13 @@
 .Countries {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
-  gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 100px;
+  margin: 0 -40px;
 
   > * {
+    flex: 1 0 calc(25% - 80px);
+    min-width: 200px;
     content-visibility: auto;
-  }
-
-  @media screen and (max-width: 1300px) {
-    & {
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-    }
-  }
-  @media screen and (max-width: 980px) {
-    & {
-      grid-template-columns: repeat(2, minmax(100px, 1fr));
-    }
-  }
-  @media screen and (max-width: 600px) {
-    & {
-      grid-template-columns: minmax(100px, 1fr);
-    }
+    margin: 40px;
   }
 }
