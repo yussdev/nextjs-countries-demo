@@ -34,15 +34,12 @@ const HomePage: NextPage<{ countries: Array<Country> }> = ({
     []
   );
 
-  // Get all countries on mount
-  useEffect(() => {
-    countriesAPI.getAllCountries().then(setCountries).catch(console.error);
-  }, []);
-
-  // search on searchTerm update
+  // Get all countries and search on searchTerm update
   useEffect(() => {
     if (searchTerm) {
       debouncedSearch(searchTerm);
+    } else {
+      countriesAPI.getAllCountries().then(setCountries).catch(console.error);
     }
   }, [searchTerm]);
 
