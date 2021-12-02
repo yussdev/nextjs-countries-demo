@@ -35,13 +35,13 @@ const HomePage: NextPage<{ countries: Array<Country> }> = ({
   );
 
   // Get all countries and search on searchTerm update
-  useEffect(() => {
-    if (searchTerm) {
-      debouncedSearch(searchTerm);
-    } else {
-      countriesAPI.getAllCountries().then(setCountries).catch(console.error);
-    }
-  }, [searchTerm]);
+  // useEffect(() => {
+  //   if (searchTerm) {
+  //     debouncedSearch(searchTerm);
+  //   } else {
+  //     countriesAPI.getAllCountries().then(setCountries).catch(console.error);
+  //   }
+  // }, [searchTerm]);
 
   // search on activeRegion update
   useEffect(() => {
@@ -75,7 +75,7 @@ const HomePage: NextPage<{ countries: Array<Country> }> = ({
         {Boolean(countries.length) ? (
           <Countries countires={countries} />
         ) : (
-          "Loading...!"
+          <p className={styles.Loading}>Loading...!</p>
         )}
       </main>
     </div>
