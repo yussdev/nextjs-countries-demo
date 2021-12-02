@@ -20,7 +20,7 @@ const CountryPage: NextPage<{ country: Country }> = ({
   useEffect(() => {
     if (countryName)
       countriesAPI
-        .searchCountryByName(String(countryName))
+        .searchCountryByName(String(countryName), true)
         .then((countries) => {
           const [first] = countries;
           setCountry(first);

@@ -24,8 +24,8 @@ export const countriesAPI = {
   getAllCountries() {
     return restCountriesClient.get<Array<Country>>('/all').then(res=> res.data);
   },
-  searchCountryByName(name: string) {
-    return restCountriesClient.get<Array<Country>>(`/name/${name.toLowerCase()}`).then(res=>res.data);
+  searchCountryByName(name: string,fullText?: boolean) {
+    return restCountriesClient.get<Array<Country>>(`/name/${name.toLowerCase()}${fullText ? '?fullText=true': ''}`).then(res=>res.data);
   },
   getCountryByRegion(region: string) {
     return restCountriesClient.get<Array<Country>>(`/region/${region}`).then(res=> res.data);
